@@ -34,7 +34,8 @@ CD C:\%WS_DIR%
 git clone https://github.com/%GITHUB_ACCOUNT%/%REPO_NAME%.git
 CD %REPO_NAME%
 SLEEP 2
-CALL mvn package
+:CALL mvn package
+CALL mvn clean site test -Dtest=AllTests -Dbuild.version="1.1 CLEAN TEST"
 ECHO.
 ECHO Executing Java programm ...
 java -cp C:\%WS_DIR%\%REPO_NAME%\target\%REPO_NAME%-%APP_VERSION%-jar-with-dependencies.jar %MAIN_CLASS% %ARG_01%
