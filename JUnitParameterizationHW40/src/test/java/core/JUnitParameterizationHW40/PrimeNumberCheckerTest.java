@@ -1,0 +1,149 @@
+package core.JUnitParameterizationHW40;
+
+import static org.junit.Assert.assertEquals;
+
+import java.util.Arrays;
+import java.util.Collection;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameter;
+import org.junit.runners.Parameterized.Parameters;
+
+ 
+
+
+@RunWith(Parameterized.class)
+public class PrimeNumberCheckerTest {
+	 private PrimeNumberChecker pn;
+	
+	 
+	 @Before
+	        public void initialize() {
+	 	              pn = new PrimeNumberChecker();
+	 	        }
+	        @Parameter(value =  0)
+	        public Integer inputNumber;
+	        
+	        @Parameter(value = 1)
+	        public Boolean expectedResult;
+	    
+	 
+	        @Parameters(name ="Number: {0}; isPrime? {1}")
+	        public static Collection<Object[]> primeNumbers() {
+	 
+	              Object[][] data = new Object[][] {
+	                            {1,true},
+	                            {2,true},
+	                            {3, true},
+	                            {5, true},
+	                            {7, true},
+	                            {11, true},
+	                            {13, true},
+	                            {17, true},
+	                            {19, true},
+	                            {23, true},
+	                            {29, true},
+	                            {31, true},
+	                            {37, true},
+	                            {41, true},
+	                            {43, true},
+	                            {47, true},
+	                            {53, true},
+	                            {59, true},
+	                            {61, true},
+	                            {67, true},
+	                            {71, true},
+	                            {73, true},
+	                            {79, true},
+	                            {83, true},
+	                            {89, true},
+	                            {97, true},
+	                            {101, true},
+	                            {103, true},
+	                            {107, true},
+	                            {109, true},
+	                            {113, true},
+	                            {127, true},
+	                            {131, true},
+	                            {137, true},
+	                            {139, true},
+	                            {149, true},
+	                            {151, true},
+	                            {157, true},
+	                            {163, true},
+	                            {167, true},
+	                            {173, true},
+	                            {179, true},
+	                            {181, true},
+	                            {191, true},
+	                            {193, true},
+	                            {197, true},
+	                            {199, true},
+	                            {211, true},
+	                            {223, true},
+	                            {227, true},
+	                            {229, true},
+	                            {233, true},
+	                            {239, true},
+	                            {241, true},
+	                            {251, true},
+	                            {257, true},
+	                            {263, true},
+	                            {269, true},
+	                            {271, true},
+	                            {277, true},
+	                            {281, true},
+	                            {283, true},
+	                            {293, true},
+	                            {307, true},
+	                            {311, true},
+	                            {313, true},
+	                            {317, true},
+	                            {331, true},
+	                            {337, true},
+	                            {347, true},
+	                            {349, true},
+	                            {353, true},
+	                            {359, true},
+	                            {367, true},
+	                            {373, true},
+	                            {379, true},
+	                            {383, true},
+	                            {389, true},
+	                            {397, true},
+	                            {401, true},
+	                            {409, true},
+	                            {419, true},
+	                            {421, true},
+	                            {431, true},
+	                            {433, true},
+	                            {439, true},
+	                            {443, true},
+	                            {449, true},
+	                            {457, true},
+	                            {461, true},
+	                            {463, true},
+	                            {467, true},
+	                            {479, true},
+	                            {487, true},
+	                            {491, true},
+	                            {499, true},
+	                            {503, true},
+	                            {509, true},
+	                            {521, true},
+	                            {523, true},
+	 
+	                            }; 
+	              
+	              return Arrays.asList(data);
+	 
+	        }
+	        @Test
+	  	  public void testPrimeNumberChecker() {
+	       System.out.println("Is " + inputNumber + " a prime number? - " + expectedResult);
+	       assertEquals(expectedResult, pn.validate(inputNumber)); 
+	       }
+}

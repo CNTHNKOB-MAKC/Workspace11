@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;TestRunnerTitle_Validation_CSV&apos;&#x0D;&#x0A;- Original project: &apos;TestRunnerTitle_Validation_CSV&apos;&#x0D;&#x0A;- Original element: &apos;core.TestRunnerTitle_Validation_CSV.App.java&apos;" description="Delete element" element1="/src\/main\/java&lt;core.TestRunnerTitle_Validation_CSV{App.java" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1422690578377" subPackages="false" version="1.0"/>
+</session>

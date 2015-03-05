@@ -1,0 +1,5 @@
+package core.JUnitParameterizationHW40;
+
+public class PrimeNumberCheckerTest {
+
+}
